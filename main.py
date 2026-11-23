@@ -130,7 +130,7 @@ def P(z,b):
 j=P("/game",{})
 while j["status"]!="done":
  while j["status"]=="your_move":
-  L=99999;x=B(f(j["fen"]));mv=chr(97+x[0]%8)+str(1+x[0]//16)+chr(97+x[1]%8)+str(1+x[1]//16)+x[2].lower()if x else''
+  L=75000;x=B(f(j["fen"]));mv=chr(97+x[0]%8)+str(1+x[0]//16)+chr(97+x[1]%8)+str(1+x[1]//16)+x[2].lower()if x else''
   if mv not in j["legal_moves"]:mv=j["legal_moves"][0]
   j=P("/move",{"game":j["game"],"move":mv})
  j=P("/game",{})
